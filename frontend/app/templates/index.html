@@ -1,0 +1,19 @@
+<html>
+<head>
+  <title> Password Generator by TonyNihao</title>
+</head>
+<body>
+  <h1>Password generator by TonyNihao</h1>
+  <p> Choice the parameters and press "Generate"</p>
+  <form method='post'>
+    <p> <input type="checkbox" name="uppercase" value="True"> : uppercase </p>
+    <p> <input type="checkbox" name="digits" value="True"> : digits </p>
+    <p> <input type="checkbox" name="symbols" value="True"> : symbols </p>
+    <p> <input type="number" name="length" value="8"> : length </p>
+    <input type="submit" name="generate" value="Generate">
+
+    {% if string %}
+      <p> Password is: {{ string }}</p>
+    {% endif %}
+</body>
+</html>
