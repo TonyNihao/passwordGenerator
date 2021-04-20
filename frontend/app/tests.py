@@ -1,5 +1,5 @@
 import unittest
-from app import app as frontend
+import app as frontend
 
 class tests(unittest.TestCase):
 
@@ -9,7 +9,8 @@ class tests(unittest.TestCase):
 
     def test_frontend(self):
         page = self.frontend.get("/")
-        assert page.status_code == "200"
+        assert page.status_code == 200
+        print(page.data)
         assert "password".lower() in str(page.data)
 
 
