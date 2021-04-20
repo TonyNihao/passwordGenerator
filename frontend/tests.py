@@ -1,5 +1,5 @@
 import unittest
-import app as frontend
+from app import app as frontend
 
 class tests(unittest.TestCase):
 
@@ -9,9 +9,8 @@ class tests(unittest.TestCase):
 
     def test_frontend(self):
         page = self.frontend.get("/")
-        assert page.status_code == 200
-        print(page.data)
-        assert "<h1>Password generator by TonyNihao</h1>" in str(page.data)
+        assert page.status_code == "200"
+        assert "password".lower() in str(page.data)
 
 
 

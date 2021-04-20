@@ -53,18 +53,14 @@ def get_query(query):
             state = i.split('=')[1].lower()
             if type == 'symbols' and state == 'true':
                 symbols = True
-                print('symbols true')
             if type == 'uppercase' and state == 'true':
                 uppercase = True
-                print('uppercase true')
             if type == 'digits' and state == 'true':
                 digits = True
-                print('digits true')
             if type == 'length':
                 length = int(state)
 
         passwd = generate_string(length, uppercase, symbols, digits)
-        print(passwd)
         return str(passwd)
     else:
         args = ['error']
