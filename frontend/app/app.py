@@ -23,7 +23,7 @@ def index():
 
 @app.route('/generate/<query>')
 def generate(query):
-    backend = 'localhost:7777'
+    backend = 'pwdgen_backend:7777'
     return requests.get('http://{0}/{1}'.format(backend,query)).text
 
 
