@@ -8,4 +8,4 @@ USER uwsgi
 
 EXPOSE 80
 
-CMD["/cmd.sh"]
+CMD ["/cmd.sh"]
