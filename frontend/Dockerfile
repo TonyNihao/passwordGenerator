@@ -6,6 +6,6 @@ COPY app/ /app
 COPY cmd.sh /cmd.sh
 USER uwsgi
 
-EXPOSE 7777
+EXPOSE 80
 
 CMD["/cmd.sh"]
