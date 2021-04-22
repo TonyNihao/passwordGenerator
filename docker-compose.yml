@@ -1,5 +1,5 @@
-pwdgen_frontend:
-        container_name: pwdgen_frontend
+frontend:
+        container_name: frontend
         build: frontend/
         ports:
                 - "80:5000"
@@ -8,9 +8,9 @@ pwdgen_frontend:
         volumes:
                 - '/home/tony/passwordGenerator/frontend/app/:/app'
         links: 
-                - pwdgen_backend
-pwdgen_backend:     
-        container_name: pwdgen_backend
+                - backend
+backend:     
+        container_name: backend
         build: backend/
         ports:
                 - "7777:7777"
