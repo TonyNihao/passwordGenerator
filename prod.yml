@@ -1,0 +1,25 @@
+proxy:
+  image: pwdgen_proxy
+  ports: 
+    - "80:80"
+  container_name: pwdgen_proxy
+  links:
+    - frontend
+frontend:
+  image: tonyprilipa/pwdgen_frontend
+  container_name: pwdgen_frontend
+  ports:
+    - "9090:9090"
+    - "5000:5000"
+  environment:
+    ENV: "PROD"
+  links:
+    - backend
+backend:
+  image: tonyprilipa/pwdgen_backend
+  container_name: pwdgen_backend
+  ports:
+    - "7777:7777"
+  environment:
+    ENV: "PROD"
+
