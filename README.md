@@ -1,13 +1,14 @@
 # passwordGenerator
-simple password generator on flask
+passwordGenerator - is a simple tool for generating passwords online.
+This project was created for learning web deploying tools 
+Be free to write message and help me be better =)
 
+## Technologies
+- Python 3.8
+- Flask
+- Docker as environment platform
+- AWS as cloud provider
+- Terraform as IaC tool
 
-two folders with backend and frontend
-
-project created for lerning docker 
-
-# Update
-
-Project will auto deploy on the aws by using Terraform
 
 1. Project review 
