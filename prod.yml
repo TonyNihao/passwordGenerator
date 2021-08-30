@@ -5,8 +5,6 @@ proxy:
   container_name: pwdgen_proxy
   links:
     - frontend
-  environment:
-    IPADDR: "35.180.65.226"
 frontend:
   image: tonyprilipa/pwdgen_frontend
   container_name: pwdgen_frontend
